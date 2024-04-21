@@ -376,7 +376,7 @@ export interface ApiBannerBanner extends Schema.CollectionType {
   attributes: {
     title: Attribute.String;
     thumbnail: Attribute.Media;
-    slug: Attribute.String;
+    slug: Attribute.UID;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -466,7 +466,8 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'api::tag.tag'
     >;
     thumbnail: Attribute.Media;
-    slug: Attribute.String;
+    discount: Attribute.Integer;
+    slug: Attribute.UID;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

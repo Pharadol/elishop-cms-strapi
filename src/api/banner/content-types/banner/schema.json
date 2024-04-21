@@ -27,7 +27,7 @@
       ]
     },
     "slug": {
-      "type": "string"
+      "type": "uid"
     }
   }
 }

@@ -45,8 +45,11 @@
         "images"
       ]
     },
+    "discount": {
+      "type": "integer"
+    },
     "slug": {
-      "type": "string"
+      "type": "uid"
     }
   }
 }
