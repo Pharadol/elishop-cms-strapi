@@ -375,7 +375,7 @@ export interface ApiBannerBanner extends Schema.CollectionType {
   };
   attributes: {
     title: Attribute.String;
-    thumbnail: Attribute.Media;
+    thumbnail: Attribute.Media & Attribute.Required;
     slug: Attribute.UID;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -465,7 +465,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'manyToOne',
       'api::tag.tag'
     >;
-    thumbnail: Attribute.Media;
+    thumbnail: Attribute.Media & Attribute.Required;
     discount: Attribute.Integer;
     slug: Attribute.UID;
     createdAt: Attribute.DateTime;
