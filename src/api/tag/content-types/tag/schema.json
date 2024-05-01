@@ -18,9 +18,13 @@
     },
     "products": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::product.product",
-      "mappedBy": "tag"
+      "mappedBy": "tags"
+    },
+    "key": {
+      "type": "string",
+      "required": true
     }
   }
 }

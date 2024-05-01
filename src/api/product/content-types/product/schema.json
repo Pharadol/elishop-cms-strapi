@@ -25,18 +25,6 @@
       "min": 0,
       "required": true
     },
-    "categories": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::category.category",
-      "mappedBy": "products"
-    },
-    "tag": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::tag.tag",
-      "inversedBy": "products"
-    },
     "thumbnail": {
       "type": "media",
       "multiple": false,
@@ -50,6 +38,18 @@
     },
     "slug": {
       "type": "uid"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "products"
     }
   }
 }

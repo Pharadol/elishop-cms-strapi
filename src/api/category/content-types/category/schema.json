@@ -16,14 +16,15 @@
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "text"
-    },
     "products": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::product.product",
-      "inversedBy": "categories"
+      "mappedBy": "category"
+    },
+    "key": {
+      "type": "string",
+      "required": true
     }
   }
 }
